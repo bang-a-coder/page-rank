@@ -41,7 +41,6 @@ def powerIteration(G):
 			tot += abs(iterations[k][page] - iterations[k-1][page])
 		
 		if tot > const: 
-			print(tot)
 			return True
 		
 	k = 0
@@ -56,7 +55,7 @@ def powerIteration(G):
 	
 	iterator(k)
 	
-	finalRanks = iterations
+	finalRanks = iterations[max(iterations.keys())]
 	return finalRanks
 
 
